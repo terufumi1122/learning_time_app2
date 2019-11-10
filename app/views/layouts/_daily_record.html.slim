@@ -1,0 +1,6 @@
+h2 Today
+ul.scroll
+  - @daily_records.order('id DESC').each_with_index do |data, i|
+    - lap_time = data[:lap_time]
+    - next if lap_time == nil
+    li #{lap_time / 60} min. : #{data[:start_time].strftime('%H:%M')}~

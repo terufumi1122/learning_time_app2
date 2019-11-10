@@ -4,11 +4,13 @@
       h1.font-weight-bold.top-title Learning Time App
       p.font-weight-lighter.sub-title Keep Your Motivation
   .row
-    .col-sm-6
-      h2 button
+    .col-sm-5
+      h2 Button
       .proccessing Yeah! You're learning now!!
       = link_to 'STOP', records_stop_path, class: 'btn btn-danger top-btn'
     .col-sm-3
       = render 'layouts/progress'
-    .col-sm-3
-      = render 'layouts/record'
+    .col-sm-2
+      = render 'layouts/daily_record'
+    .col-sm-2
+      = render 'layouts/total_record'
