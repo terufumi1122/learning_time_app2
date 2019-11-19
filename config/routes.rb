@@ -42,6 +42,9 @@
 
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resorces :users
+  end
   root to: 'users#show'
   get 'records/stop', to: 'records#stop'
   get 'records/line_notify', to: 'records#line_notify'
