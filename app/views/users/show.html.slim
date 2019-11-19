@@ -1,0 +1,17 @@
+.container.text-white.text-center.align-items-center.bg-info
+  .row
+    .col
+      h1.font-weight-bold.top-title Learning Time App
+      p.font-weight-lighter.sub-title Keep Your Motivation
+  .row
+    .col-lg-5.col-12
+      h2 Button
+      = link_to 'START', new_record_path, id: 'start', class: 'btn btn-primary top-btn'
+      .proccessing ↑↑Let's learning!!
+      = link_to 'Send to your LINE account', records_line_notify_path, id: 'line-notify', class: 'btn btn-success send-btn'
+    .col-lg-3.col-12
+      = render 'layouts/progress'
+    .col-lg-2.col-12
+      = render 'layouts/daily_record'
+    .col-lg-2.col-12
+      = render 'layouts/total_record'
