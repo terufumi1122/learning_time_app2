@@ -1,2 +1,27 @@
-h1 Admin::Users#index
-p Find me in app/views/admin/users/index.html.slim
+/h1 Users
+/
+/= link_to 'Sign up', new_admin_user_path, class: 'btn btn-primary'
+/
+/.mb-3
+/  table.table.table-hover
+/    thead.thead-default
+/      tr
+/        th= User.human_attribute_name(:name)
+/        th= User.human_attribute_name(:email)
+/        th= User.human_attribute_name(:admin)
+/        th= User.human_attribute_name(:created_at)
+/        th= User.human_attribute_name(:updated_at)
+/        th
+/    tbody
+/      - @users.each do |user|
+/        tr
+/          td= link_to user.name, [:admin, user]
+/          td= user.email
+/          td= user.admin? 'Present' : 'Absent'
+/          td= user.created_at
+/          td= user.updated_at
+/          td
+/            = link_to 'Edit', edit_admin_user_path(user), class: 'btn btn-primary mr-3'
+/            = link_to 'Delete', [:admin, user], method: :delete, data: { confirm: "Username \"#{user.name}\" will delete. Are you sure?" }, class: 'btn btn-danger'
+/
+/

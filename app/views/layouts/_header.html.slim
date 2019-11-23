@@ -1,11 +1,14 @@
 .container.bg-light
   .row
-    .col-lg-4.col-12
+    .col-lg-3.col-12
       h3 =link_to 'TOP', root_path
       p Lorem ipsum dolor
-    .col-lg-4.col-12
-      h3 Column2
+    .col-lg-3.col-12
+      h3 =link_to 'RECORDS', records_path
       p Lorem ipsum dolor
-    .col-lg-4.col-12
-      h3 Column3
+    .col-lg-3.col-12
+      h3 = link_to 'Admin login', new_admin_user_path
+      p Lorem ipsum dolor
+    .col-lg-3.col-12
+      h3 = link_to 'Sign in', new_user_path
       p Lorem ipsum dolor
